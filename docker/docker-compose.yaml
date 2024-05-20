@@ -1,6 +1,7 @@
 name: leashar-project-docker
 
 services:
+
   postgres_db:
     image: postgres:alpine3.18
     container_name: postgres_db
@@ -19,7 +20,6 @@ services:
         reservations:
           cpus: '0.25'
           memory: 256M
-  
   
   pgadmin:
     image: dpage/pgadmin4
