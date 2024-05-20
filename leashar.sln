@@ -1,5 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34728.123
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionFolder", "SolutionFolder", "{BB584E4B-E05B-420D-88A5-20165CB2F2D1}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docker", "Docker", "{1D2CB7EA-D96F-4AEE-8AB4-7722BEA284AC}"
@@ -9,14 +12,24 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docker", "Docker", "{1D2CB7
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{8D01CE34-F086-48EB-9741-D3A60430F992}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Leashar.WebApi", "src\Leashar.WebApi\Leashar.WebApi.csproj", "{096FF159-5877-4FDD-8D71-281332D2587F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{096FF159-5877-4FDD-8D71-281332D2587F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{096FF159-5877-4FDD-8D71-281332D2587F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{096FF159-5877-4FDD-8D71-281332D2587F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{096FF159-5877-4FDD-8D71-281332D2587F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{1D2CB7EA-D96F-4AEE-8AB4-7722BEA284AC} = {BB584E4B-E05B-420D-88A5-20165CB2F2D1}
+		{096FF159-5877-4FDD-8D71-281332D2587F} = {8D01CE34-F086-48EB-9741-D3A60430F992}
 	EndGlobalSection
 EndGlobal
