@@ -14,7 +14,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Leashar.WebApi", "src\Leash
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{BAE0066A-32C7-430D-B5C0-FAC2C3E4BFFB}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{361F4710-86B0-4B3C-B1E9-BDADFBFB42C1}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{361F4710-86B0-4B3C-B1E9-BDADFBFB42C1}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Databases", "Databases", "{F35D1D4D-B30E-4203-AE8E-2D278BE87ED8}"
 EndProject
@@ -24,7 +24,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentatio
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{A53C3D03-BB34-4C13-ABBB-62C8A04D7F2A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Leashar.Core", "src\Leashar.Core\Leashar.Core.csproj", "{3088A84A-E599-4E5E-BD17-0033CE8BD50A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Leashar.Domain", "src\Leashar.Domain\Leashar.Domain.csproj", "{3088A84A-E599-4E5E-BD17-0033CE8BD50A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Leashar.Infrastructure.Database.EF", "src\Leashar.Infrastructure.Database.EF\Leashar.Infrastructure.Database.EF.csproj", "{0A7EACD4-AE24-4678-98A9-FE31E12AA4E9}"
 EndProject

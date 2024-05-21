@@ -1,6 +1,13 @@
-﻿namespace Leashar.Domain.Common.Models;
+﻿using Newtonsoft.Json;
 
-public class ApiResultBase
+namespace Leashar.Domain.Common.Models;
+
+public abstract class ApiResultBase
 {
-    
+    [JsonConstructor]
+    public ApiResultBase(bool isSuccess)
+    {
+        IsSuccess = isSuccess;
+    }
+    public bool IsSuccess { get; set; }
 }

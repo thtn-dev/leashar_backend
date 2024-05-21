@@ -1,6 +1,8 @@
-﻿namespace Leashar.Domain.Events;
+﻿using MediatR;
 
-public class BaseEvent
+namespace Leashar.Domain.Events;
+
+public class BaseEvent : INotification
 {
     
 }
