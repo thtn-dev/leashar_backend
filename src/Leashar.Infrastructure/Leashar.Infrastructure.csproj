@@ -6,4 +6,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Leashar.Application\Leashar.Application.csproj" />
+    <ProjectReference Include="..\Leashar.Infrastructure.Database.EF\Leashar.Infrastructure.Database.EF.csproj" />
+  </ItemGroup>
+
 </Project>

@@ -26,11 +26,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{A53C3D03
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Leashar.Domain", "src\Leashar.Domain\Leashar.Domain.csproj", "{3088A84A-E599-4E5E-BD17-0033CE8BD50A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Leashar.Infrastructure.Database.EF", "src\Leashar.Infrastructure.Database.EF\Leashar.Infrastructure.Database.EF.csproj", "{0A7EACD4-AE24-4678-98A9-FE31E12AA4E9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Leashar.Infrastructure.Database.EF", "src\Leashar.Infrastructure.Database.EF\Leashar.Infrastructure.Database.EF.csproj", "{0A7EACD4-AE24-4678-98A9-FE31E12AA4E9}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Leashar.Application", "src\Leashar.Application\Leashar.Application.csproj", "{23848834-51F0-40DC-BDB3-D3200437B49B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Leashar.Infrastructure", "src\Leashar.Infrastructure\Leashar.Infrastructure.csproj", "{5CC6FECF-54D4-44DF-A726-AB3B30B3FAC3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Leashar.Infrastructure", "src\Leashar.Infrastructure\Leashar.Infrastructure.csproj", "{5CC6FECF-54D4-44DF-A726-AB3B30B3FAC3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
