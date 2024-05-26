@@ -2,6 +2,7 @@
 <p align="center">
   <img src="https://github.com/thtn-dev/leashar_backend/blob/main/assets/images/logo.png" alt="Backend Leashar Project Logo">
 </p>
+
 ## Description
 The Backend Leashar Project is a robust and scalable backend system designed to support an online learning platform similar to Udemy or Coursera. This project employs Clean Architecture principles alongside Domain-Driven Design (DDD) and Command Query Responsibility Segregation (CQRS) patterns to ensure a maintainable, testable, and flexible codebase.
 
@@ -25,7 +26,7 @@ The Backend Leashar Project is a robust and scalable backend system designed to 
 - **Command Query Responsibility Segregation (CQRS)**: Separates the command (write) and query (read) operations, enhancing the scalability and performance of the system.
 
 ## Technologies Used
-- Comming Soon
+- Coming Soon
 
 ## Getting Started
-- Comming Soon
+- Coming Soon

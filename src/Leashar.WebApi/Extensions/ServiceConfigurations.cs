@@ -1,4 +1,5 @@
 ﻿using Leashar.Application;
+using Leashar.Infrastructure;
 
 namespace Leashar.WebApi.Extensions
 {
@@ -10,8 +11,8 @@ namespace Leashar.WebApi.Extensions
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
-            builder.Services.AddApplicationLayer();
-
+            builder.Services.AddApplicationLayer()
+                .AddInfrastructureLayer();
             return builder;
         }
     }

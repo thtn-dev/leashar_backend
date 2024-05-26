@@ -7,8 +7,8 @@ public interface IEntityBase<T>
 
 public interface IDateTracking
 {
-    public DateTimeOffset CreatedDate { get; set; }
-    public DateTimeOffset? ModifiedDate { get; set; }
+    public DateTimeOffset CreatedAt { get; set; }
+    public DateTimeOffset? UpdatedAt { get; set; }
 }
 
 public interface ISoftDelete
@@ -18,6 +18,6 @@ public interface ISoftDelete
 
 public interface IAuditableEntity : IDateTracking, ISoftDelete
 {
-    public string CreatedBy { get; set; }
-    public string? ModifiedBy { get; set; }
+    public string? CreatedBy { get; set; }
+    public string? UpdatedBy { get; set; }
 }

@@ -18,4 +18,5 @@ namespace Leashar.Application
             return services;
         }
     }
+
 }

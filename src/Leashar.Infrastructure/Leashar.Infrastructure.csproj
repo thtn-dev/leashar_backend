@@ -8,7 +8,10 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Leashar.Application\Leashar.Application.csproj" />
-    <ProjectReference Include="..\Leashar.Infrastructure.Database.EF\Leashar.Infrastructure.Database.EF.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="8.0.4" />
   </ItemGroup>
 
 </Project>

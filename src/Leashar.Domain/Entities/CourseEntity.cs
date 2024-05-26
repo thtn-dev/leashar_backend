@@ -1,6 +1,8 @@
-﻿namespace Leashar.Domain.Entities;
+﻿using Leashar.Domain.Entities.Abstracts;
 
-public class CourseEntity
+namespace Leashar.Domain.Entities;
+
+public class CourseEntity : EntityAuditableBase<string>
 {
-    
+    public string? Description { get; set; }
 }
