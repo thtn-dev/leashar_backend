@@ -1,0 +1,32 @@
+﻿using Ardalis.GuardClauses;
+using Leashar.Domain.Common.ValueObjects;
+using Leashar.Domain.Shared;
+using Leashar.Domain.Shared.Entities;
+
+namespace Leashar.Domain.Users;
+
+public class UserEntity : EntityBase<string>, IAggregateRoot
+{
+    public UserName UserName { get; private set; }
+    public Email Email { get;  private set; }
+    public string HashedPassword { get; private set; }
+    
+    public UserEntity(UserName userName, Email email, string hashedPassword)
+    {
+        UserName = userName;
+        Email = email;
+        HashedPassword = hashedPassword;
+    }
+    
+    public void SetUserName(string userName)
+    {
+        Guard.Against.NullOrWhiteSpace(userName, nameof(userName));
+        UserName = UserName.Create(userName);
+    }
+    
+    public void SetEmail(string email)
+    {
+        Guard.Against.NullOrWhiteSpace(email, nameof(email));
+        Email = Email.Create(email);
+    }
+}

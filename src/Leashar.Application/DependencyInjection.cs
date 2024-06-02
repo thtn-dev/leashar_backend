@@ -1,4 +1,6 @@
-﻿using Leashar.Application.Common.Behaviours;
+﻿using System.Reflection;
+using FluentValidation;
+using Leashar.Application.Common.Behaviours;
 using MediatR;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -13,8 +15,9 @@ namespace Leashar.Application
                 cfg.RegisterServicesFromAssemblyContaining(typeof(DependencyInjection));
 
             });
-
+            services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
             services.AddTransient(typeof(IPipelineBehavior<,>), typeof(UnhandledExceptionBehaviour<,>));
+            services.AddTransient(typeof(IPipelineBehavior<,>), typeof(ValidatorBehaviour<,>));
             return services;
         }
     }

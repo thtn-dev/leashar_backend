@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace Leashar.Domain.Common.Models;
+namespace Leashar.Domain.Common.Common.Models;
 
 public abstract class ApiResponseBase
 {
