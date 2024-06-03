@@ -29,4 +29,17 @@ public class UserEntity : EntityBase<string>, IAggregateRoot
         Guard.Against.NullOrWhiteSpace(email, nameof(email));
         Email = Email.Create(email);
     }
+
+    public void SetHashedPassword(string hashedPassword)
+    {
+        Guard.Against.NullOrWhiteSpace(hashedPassword, nameof(hashedPassword));
+        HashedPassword = hashedPassword;
+    }
+    private UserEntity() { }
+    //public UserEntity(string userName, string email, string hashedPassword)
+    //{
+    //    UserName = UserName.Create(userName);
+    //    Email = Email.Create(email);
+    //    HashedPassword = hashedPassword;
+    //}
 }

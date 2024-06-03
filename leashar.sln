@@ -16,6 +16,9 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Leashar.WebApi", "src\Leashar.WebApi\Leashar.WebApi.csproj", "{096FF159-5877-4FDD-8D71-281332D2587F}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{BAE0066A-32C7-430D-B5C0-FAC2C3E4BFFB}"
+	ProjectSection(SolutionItems) = preProject
+		src\Leashar.Infrastructure\Readme.md = src\Leashar.Infrastructure\Readme.md
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{361F4710-86B0-4B3C-B1E9-BDADFBFB42C1}"
 EndProject
@@ -31,7 +34,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Leashar.Application", "src\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Leashar.Infrastructure", "src\Leashar.Infrastructure\Leashar.Infrastructure.csproj", "{5CC6FECF-54D4-44DF-A726-AB3B30B3FAC3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Leashar.Domain.Shared", "src\Leashar.Domain.Shared\Leashar.Domain.Shared.csproj", "{DF62430B-849E-4B7F-9802-6B5595E8F32D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Leashar.Domain.Shared", "src\Leashar.Domain.Shared\Leashar.Domain.Shared.csproj", "{DF62430B-849E-4B7F-9802-6B5595E8F32D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1,5 +1,4 @@
-﻿using Leashar.Application.Common.Interfaces;
-using Leashar.Domain.Courses;
+﻿using Leashar.Infrastructure.Data.ModelBuilders;
 using Microsoft.EntityFrameworkCore;
 
 namespace Leashar.Infrastructure.Data.Contexts
@@ -13,6 +12,7 @@ namespace Leashar.Infrastructure.Data.Contexts
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
+            builder.ApplyConfigurations();
         }
         // public DbSet<CourseEntity> Courses { get; set; }
     }

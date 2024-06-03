@@ -1,6 +1,6 @@
 ﻿namespace Leashar.Domain.Shared;
 [Serializable]
-public abstract  class ValueObject : IEquatable<ValueObject>
+public abstract  class ValueObject : IEquatable<ValueObject>, IComparable, IComparable<ValueObject>
 {
     private int? _cachedHashCode;
     protected abstract IEnumerable<object> GetEqualityComponents();
@@ -29,14 +29,42 @@ public abstract  class ValueObject : IEquatable<ValueObject>
         return GetEqualityComponents().SequenceEqual(other.GetEqualityComponents());
     }
     
-    public int CompareTo(object? obj)
+    public virtual int CompareTo(object? obj)
     {
-        throw new NotImplementedException();
+        if (obj == null)
+            return 1;
+        var thisType = GetUnproxiedType(this);
+        var otherType = GetUnproxiedType(obj);
+        if (thisType != otherType)
+            return string.Compare(thisType.ToString(), otherType.ToString(), StringComparison.Ordinal);
+        var other = (ValueObject)obj;
+        var components = GetEqualityComponents().ToArray();
+        var otherComponents = other.GetEqualityComponents().ToArray();
+        return components.Select((t, i) => CompareComponents(t, otherComponents[i])).FirstOrDefault(comparison => comparison != 0);
     }
 
-    public int CompareTo(ValueObject? other)
+    public virtual int CompareTo(ValueObject? other)
     {
-        throw new NotImplementedException();
+        return CompareTo(other as object);
+    }
+
+    private static int CompareComponents(object? object1, object? object2)
+    {
+        switch (object1)
+        {
+            case null when object2 is null:
+                return 0;
+            case null:
+                return -1;
+        } 
+
+        if (object2 is null)
+            return 1;
+        
+        if (object1 is IComparable comparable1 && object2 is IComparable comparable2)
+            return comparable1.CompareTo(comparable2);
+        
+        return object1.Equals(object2) ? 0 : -1;
     }
 
     public bool Equals(ValueObject? other)
@@ -58,5 +86,21 @@ public abstract  class ValueObject : IEquatable<ValueObject>
     public static bool operator !=(ValueObject a, ValueObject b)
     {
         return !(a == b);
+    }
+    
+    internal static Type GetUnproxiedType(object obj)
+    {
+        ArgumentNullException.ThrowIfNull(obj);
+
+        const string efCoreProxyPrefix = "Castle.Proxies.";
+        const string nHibernateProxyPostfix = "Proxy";
+
+        var type = obj.GetType();
+        var typeString = type.ToString();
+
+        if (typeString.Contains(efCoreProxyPrefix) || typeString.EndsWith(nHibernateProxyPostfix))
+            return type.BaseType!;
+
+        return type;
     }
 }
