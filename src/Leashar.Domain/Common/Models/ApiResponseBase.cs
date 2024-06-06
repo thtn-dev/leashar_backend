@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace Leashar.Domain.Common.Common.Models;
+namespace Leashar.Domain.Common.Models;
 
 public abstract class ApiResponseBase
 {
@@ -14,19 +14,20 @@ public abstract class ApiResponseBase
 
 public class ApiSuccessResponse<T> : ApiResponseBase
 {
-    public ApiSuccessResponse(T data) : base(true)
+    [JsonConstructor]
+    public ApiSuccessResponse(T? data) : base(true)
     {
         Data = data;
     }
-    public T Data { get; set; }
+    public T? Data { get; set; }
 }
 
 public class ApiErrorResponse : ApiResponseBase
 {
+    [JsonConstructor]
     public ApiErrorResponse(List<string>? errors) : base(false)
     {
         Errors = errors;
     }
     public List<string>? Errors { get; set; }
 }
-
