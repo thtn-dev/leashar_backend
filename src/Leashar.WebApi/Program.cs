@@ -34,10 +34,10 @@ namespace Leashar.WebApi
             
             try
             {
-                context.Database.SetCommandTimeout(30);
-                context.Database.OpenConnection();
-                logger.LogInformation("Database connection established.");
-                context.Database.CloseConnection();
+                //context.Database.SetCommandTimeout(30);
+                //context.Database.OpenConnection();
+                //logger.LogInformation("Database connection established.");
+                //context.Database.CloseConnection();
             }
             catch (Exception)
             {

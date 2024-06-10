@@ -1,5 +1,9 @@
-﻿using Leashar.Domain.Common.Options;
+﻿using Leashar.Application.Common.Repositories;
+using Leashar.Domain.Common.Options;
+using Leashar.Domain.Shared;
+using Leashar.Infrastructure.Common.Repositories;
 using Leashar.Infrastructure.Data.Contexts;
+using Leashar.Infrastructure.Users;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -12,6 +16,7 @@ namespace Leashar.Infrastructure
         public static IServiceCollection AddInfrastructureLayer(this IServiceCollection services, IConfiguration configuration)
         {
             services.AddEntityFramework(configuration);
+            services.AddRepositories();
             return services;
         }
         
@@ -37,7 +42,12 @@ namespace Leashar.Infrastructure
                     builder.MigrationsAssembly(typeof(AppDbContext).Assembly.FullName);
                 });
             });
+        }
 
+        private static void AddRepositories(this IServiceCollection services)
+        {
+            services.AddScoped<IUserRepository, UserRepository>();
+            services.AddScoped<IUnitOfWork, UnitOfWork<AppDbContext>>();
         }
     }
 }

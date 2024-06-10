@@ -1,4 +1,5 @@
 ﻿using Ardalis.GuardClauses;
+using ErrorOr;
 using Leashar.Domain.Common.ValueObjects;
 using Leashar.Domain.Shared;
 using Leashar.Domain.Shared.Entities;
@@ -13,6 +14,7 @@ public class UserEntity : EntityBase<string>, IAggregateRoot
     
     public UserEntity(UserName userName, Email email, string hashedPassword)
     {
+        Id = Guid.NewGuid().ToString();
         UserName = userName;
         Email = email;
         HashedPassword = hashedPassword;

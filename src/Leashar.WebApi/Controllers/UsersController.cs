@@ -16,7 +16,7 @@ public class UsersController : ControllerBase
     [HttpPost("register")]
     public async Task<IActionResult> Register([FromBody] CreateUserCommand command)
     {
-        var rs = _mediator.Send(command);
+        var rs = await _mediator.Send(command);
         return Ok(rs);
     }
     
